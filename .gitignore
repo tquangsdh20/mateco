@@ -1,8 +1,9 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
+*.py[cox]
 *$py.class
-
+*.c
+*src/setup.py
 # C extensions
 *.so
 

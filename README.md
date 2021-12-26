@@ -97,9 +97,8 @@ print(results)
 >> ['pəˈteɪtəʊ', 'təˈmɑːtəʊ', 'ˈʃɛdjuːl']
 ```
 
-<a href="https://github.com/tquangsdh20/mateco"><p align="center"><img src="https://img.shields.io/badge/Github-tquangsdh20-orange?style=social&logo=github"></p></a>
-
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/tquangsdh20/mateco/main/.github/footer.svg">
 </p>
+
+<a href="https://github.com/tquangsdh20/mateco"><p align="center"><img src="https://img.shields.io/badge/Github-tquangsdh20-orange?style=social&logo=github"></p></a>

@@ -29,7 +29,8 @@ sudo pip3 install mateco
 
 #### Setup Language for Converting
 
-Special cases:
+To setup language and voice using the method `setup_voice(language_code)`, where `language_code` :
+
 - English US : `am`
 - English UK : `br`
 - Portuguese (Brazil): `pt-br`
@@ -55,6 +56,8 @@ mod.convert('Je parle un peu français')
 mod.save_to_file('audio_french.mp3')
 mod.close()
 ```
+
+Output
 
 ```
 >> All voices for your language:
@@ -90,6 +93,8 @@ bulk = ['potato', 'tomato', 'schedule']
 results = mod.get_ipas(bulk)
 print(results)
 ```
+
+Output
 
 ```
 >> Bristh say: pəˈteɪˌtoʊ, təˈmeɪˌtoʊ

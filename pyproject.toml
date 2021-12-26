@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mateco"
-version = "1.2.1"
+version = "1.3.1"
 description = "Master Text Converter"
 authors = ["Joseph Quang <tquangsdh20@fsob.win>"]
 readme = "README.md"
@@ -27,6 +27,8 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.6"
+pyfreetts = "^0.1"
+text2ipa = "^1.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

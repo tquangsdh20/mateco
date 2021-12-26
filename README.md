@@ -1,6 +1,8 @@
 <p align="center">
-  <h1 align="center">Master Text Converter</h1>
+  <img src="https://raw.githubusercontent.com/tquangsdh20/mateco/main/.github/header.svg">
 </p>
+
+<p align="center"><img src="https://github.com/tquangsdh20/mateco/actions/workflows/test.yml/badge.svg"></p>
 
 ## Features
 
@@ -23,62 +25,46 @@ sudo pip3 install mateco
 ```
 ## How does it work?
 
-### Work with module TTS
+### Working with module TTS
 
-#### Initialatize module and setup language
+#### Setup Language for Converting
 
+Special cases:
+- English US : `am`
+- English UK : `br`
+- Portuguese (Brazil): `pt-br`
+- Portuguese (Portugal): `pt`
+- The other languages : `ISO LANGUAGE CODE 639-1`
 
 ```python
 from mateco import TTS
+
+# Initialization for Module TTS
 mod = TTS()
-#Setup language
-mod.setup_language()
+
+# Choice the voice for America English
+mod.setup_voice('am')
+
+# Convert to audio data
+mod.convert('Welcome to Master Text Converter library. I hope it\'s useful for you.')
+mod.save_to_file('audio.mp3')
+
+# Change the language
+mod.setup_voice('fr')
+mod.convert('Je parle un peu français')
+mod.save_to_file('audio_french.mp3')
+mod.close()
 ```
 
-    Choose Language: 
-    
-        1. English UK
-        2. English US
-        3. Chinese
-        4. Janpanese
-        5. French
-        6. Spanish Mexico
-        7. Italian
-        8. German
-        9. Russian
-        10. Dutch
-        11. Korean
-        12. Arabic
-        13. Spanish Spain
-    
-    Enter your choice:  2
-    
-
-#### Setup voice
-
-
-```python
-mod.setup_voice()
 ```
-
-    Voice Options for English US: 
-            1. Joey     - Male
-            2. Justin   - Little Boy
-            3. Matthew  - Male
-            4. Salli    - Female
-            5. Joanna   - Female
-            6. Ivy      - Little Girl
-            
-        Enter your choose:  4
-    
-
-#### Update the text you want to convert & Save it
-
-
-```python
-mod.update('I try this, try that, try everything.')
-mod.play()
-mod.save('output/audio.mp3')
+>> All voices for your language:
+>>    1. Joey - Male - SAPI5
+>>    2. Justin - Male - SAPI5
+>>    3. Matthew - Male - SAPI5
+>>    4. Salli - Female - SAPI5
+>>    5. Joanna - Female - SAPI5
+>>    6. Ivy - Female - SAPI5
+>> Make your choice: 3
 ```
 
 ### Work with module IPA 
@@ -88,43 +74,32 @@ mod.save('output/audio.mp3')
 
 ```python
 from mateco import IPA
-#Default is English UK
-mod = IPA()
-```
 
-#### Update text to convert
-
-
-```python
-en_uk = mod.get_ipa('I dropped my food on my foot')
-print(en_uk)
-```
-
-    aɪ drɒpt maɪ fuːd ɒn maɪ fʊt
-    
-
-#### Test with boths
-
-
-```python
-#Setup English UK IPA
-mod = IPA(1)
+# Setup English UK IPA
+mod = IPA('am')
 en_uk = mod.get_ipa('potato, tomato')
 print('Bristh say:',en_uk)
-#Setup English US IPA
-mod = IPA(2)
+
+# Setup English US IPA
+mod = IPA('br')
 en_us = mod.get_ipa('potato, tomato')
 print('America say:',en_us)
+
+# Working with Bulk - List of the texts
+bulk = ['potato', 'tomato', 'schedule']
+results = mod.get_ipas(bulk)
+print(results)
 ```
 
-    Bristh say: pəˈteɪtəʊ, təˈmɑːtəʊ
-    America say: pəˈteɪˌtoʊ, təˈmeɪˌtoʊ
-    
-### Change Log
+```
+>> Bristh say: pəˈteɪˌtoʊ, təˈmeɪˌtoʊ
+>> America say: pəˈteɪtəʊ, təˈmɑːtəʊ
+>> ['pəˈteɪtəʊ', 'təˈmɑːtəʊ', 'ˈʃɛdjuːl']
+```
 
-<b>PLANNING</b>  
-Module TTS: Support Text to Pretty Speech with 13 languages.  
-Module IPA: Support Text to IPA  
-Note: LIMITED Online converter
+<a href="https://github.com/tquangsdh20/mateco"><p align="center"><img src="https://img.shields.io/badge/Github-tquangsdh20-orange?style=social&logo=github"></p></a>
 
-### URL: https://github.com/tquangsdh20/mateco/
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tquangsdh20/mateco/main/.github/footer.svg">
+</p>

@@ -1,10 +1,18 @@
 from mateco import TTS
-#Setup with Language ID = 2 (English US)
-mod = TTS(2)
-#Setup language
-#mod.setup_language()
-print('This example is setup with Language English US.')
-mod.setup_voice()
-mod.update('Welcome to Master Text Converter library. I hope it\'s useful for you.')
-mod.play()
-#mod.save('/output/audio.mp3')
+
+# Initialization for Module TTS
+mod = TTS()
+
+# Choice the voice for America English
+mod.setup_voice("am")
+
+# Convert to audio data
+mod.convert("Welcome to Master Text Converter library. I hope it's useful for you.")
+mod.save_to_file("audio.mp3")
+
+# Change the language
+mod.setup_voice("fr")
+mod.convert("Je parle un peu français")
+mod.save_to_file("audio_french.mp3")
+# Must be closed after done
+mod.close()

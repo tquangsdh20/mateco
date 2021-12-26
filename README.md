@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/tquangsdh20/mateco/main/.github/header.svg">
 </p>
 
-<p align="center"><img src="https://github.com/tquangsdh20/mateco/actions/workflows/test.yml/badge.svg"></p>
+<p align="center"><img src="https://github.com/tquangsdh20/mateco/actions/workflows/test.yml/badge.svg"> <a href="https://codecov.io/github/tquangsdh20/mateco/commit/813bae77e548561e373c9a882199e795c44592a7"><img src="https://codecov.io/gh/tquangsdh20/mateco/branch/main/graphs/badge.svg?branch=main"></a> <img src = "https://img.shields.io/pypi/pyversions/mateco"></p>
 
 ## Features
 

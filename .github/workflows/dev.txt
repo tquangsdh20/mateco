@@ -5,3 +5,4 @@ pytest-cov==2.12.1
 mypy==0.910
 text2ipa>=1.4.1
 pyfreetts>=0.1.0
+playsound==1.2.2

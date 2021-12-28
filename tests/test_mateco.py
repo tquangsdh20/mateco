@@ -5,7 +5,7 @@ import unittest
 
 
 def test_version():
-    assert __version__ == "1.1.0"
+    assert __version__ == "1.4.1"
 
 
 class Test_Module_IPA(unittest.TestCase):
